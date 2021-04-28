@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+
+<div style="padding-left: 20px; font-family: Georgia, 'Times New Roman', Times, serif;">
+    <h2>Soil Moisture Sensor</h2>
+
+</div>
+
+<div style="padding: 20px;  text-align: center;">
+    <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1359268/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+</div>
+
+<div style="text-align: center; padding-top: 20px;">
+    <a href="/"><input type="submit" value="Return to Home page" style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: large; height: 40px; width: 200px;"></a>
+</div>
+
+{% endblock %}
