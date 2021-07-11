@@ -84,17 +84,20 @@ void loop() {
 //  int ldrStatus = analogRead(ldrPin);
 //  Serial.print("LDR:");
 //  Serial.println(ldrStatus);
-  
+  Serial.print("LDR:");  
   // Digital Mode
   int ldrstatus =0;
   if (digitalRead(D7) ==HIGH){
     ldrstatus = 1;
+    Serial.println("High Light Intensity");
   }
   else {
     ldrstatus =0;
+    Serial.println("Low Light Intensity");
+
   }
-  Serial.print("LDR:");
-  Serial.println (ldrstatus);
+
+//  Serial.println (ldrstatus);
 
 
 
@@ -118,11 +121,14 @@ void loop() {
   if  (soilmoisturepercent<35){
     servo.write(0);
     motor =1;
+     Serial.println("Motor On");
   }
   // close
   else{
    servo.write(90);
    motor = 0;
+     Serial.println("Motor Off");
+
   }
 
 
